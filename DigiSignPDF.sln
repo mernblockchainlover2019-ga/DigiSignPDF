@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiSignPDF", "DigiSignPDF\DigiSignPDF.csproj", "{9BFCCB22-539C-40C4-8CFD-83F4D446BE8B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DigiSignPDFSetup", "DigiSignPDFSetup\DigiSignPDFSetup.vdproj", "{AFA72B24-4186-4579-A8A3-AF6C27A5BD22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BFCCB22-539C-40C4-8CFD-83F4D446BE8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BFCCB22-539C-40C4-8CFD-83F4D446BE8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BFCCB22-539C-40C4-8CFD-83F4D446BE8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BFCCB22-539C-40C4-8CFD-83F4D446BE8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFA72B24-4186-4579-A8A3-AF6C27A5BD22}.Debug|Any CPU.ActiveCfg = Debug
+		{AFA72B24-4186-4579-A8A3-AF6C27A5BD22}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E38BBE61-51D5-4CCC-A1DD-CA68166392C1}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.1.1.6:8080/tfs/webappcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DigiSignPDF\\DigiSignPDF.csproj
+		SccProjectName1 = DigiSignPDF
+		SccLocalPath1 = DigiSignPDF
+		SccProjectUniqueName2 = DigiSignPDFSetup\\DigiSignPDFSetup.vdproj
+		SccProjectName2 = DigiSignPDFSetup
+		SccLocalPath2 = DigiSignPDFSetup
+	EndGlobalSection
+EndGlobal

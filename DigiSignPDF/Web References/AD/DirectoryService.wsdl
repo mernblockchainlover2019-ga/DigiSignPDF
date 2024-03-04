@@ -1,0 +1,3077 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://lthed.com" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://lthed.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://lthed.com">
+      <s:element name="GetUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inSAM" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFullNamefromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFullNamefromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFullNamefromUserIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFirstNamefromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFirstNamefromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFirstNamefromUserIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastNamefromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastNamefromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastNamefromUserIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDisplayNamefromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDisplayNamefromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDisplayNamefromUserIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmailIDfromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmailIDfromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmailIDfromUserIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerNamefromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerNamefromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetManagerNamefromUserIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerEmailfromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerEmailfromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetManagerEmailfromUserIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerIDfromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerIDfromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetManagerIDfromUserIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPSNofromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPSNofromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPSNofromUserIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPSNoFromEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPSNoFromEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPSNoFromEmailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerNameFromEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerNameFromEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetManagerNameFromEmailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFullNameFromEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFullNameFromEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFullNameFromEmailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPSNoFromname">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPSNoFromnameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPSNoFromnameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmailFromName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmailFromNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmailFromNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrincipalNameFromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrincipalNameFromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPrincipalNameFromUserIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentFromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentFromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDepartmentFromUserIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentNameFromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentNameFromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDepartmentNameFromUserIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentFromName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentFromNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDepartmentFromNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentFromEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentFromEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDepartmentFromEmailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMobileNoFromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMobileNoFromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMobileNoFromUserIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDesignationFromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDesignationFromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDesignationFromUserIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPasswordExpiryDateFromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPasswordExpiryDateFromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPasswordExpiryDateFromUserIDResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBaanSBUFromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Comp" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBaanSBUFromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBaanSBUFromUserIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendExpiryMailFromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendExpiryMailFromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendExpiryMailFromUserIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExprDaysOfDomainIDFromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExprDaysOfDomainIDFromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetExprDaysOfDomainIDFromUserIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_frm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_to" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_ccto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_sub" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_bdy" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendExpiryMailOnAnyDayFromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendExpiryMailOnAnyDayFromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendExpiryMailOnAnyDayFromUserIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAuthentication">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAuthenticationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getAuthenticationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAuthenticationAllDomain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domain" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAuthenticationAllDomainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getAuthenticationAllDomainResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="changePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="npwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="changePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="changePasswordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeeDataFromUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeeDataFromUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeDataFromUserIDResult" type="tns:Person" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Person">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EMNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Extn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeptCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeptName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Designation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SBU" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ManagerPSNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ManagerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ManagerEmail" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUsersList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inSAM" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsersListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsersListResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Encrypt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clearText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncryptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Decrypt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cipherText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DecryptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DecryptResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddApplicationWiseUserLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AppCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ActionBy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Activity" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddApplicationWiseUserLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddApplicationWiseUserLogResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddApplicationErrorLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SystemName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MainExecMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InnerExecMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrentUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddApplicationErrorLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddApplicationErrorLogResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="dateTime" type="s:dateTime" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="int" type="s:int" />
+      <s:element name="Person" nillable="true" type="tns:Person" />
+      <s:element name="ArrayOfAnyType" nillable="true" type="tns:ArrayOfAnyType" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFullNamefromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFullNamefromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetFullNamefromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFullNamefromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFirstNamefromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFirstNamefromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetFirstNamefromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFirstNamefromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastNamefromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastNamefromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetLastNamefromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastNamefromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDisplayNamefromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDisplayNamefromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetDisplayNamefromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDisplayNamefromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailIDfromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmailIDfromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailIDfromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmailIDfromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerNamefromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetManagerNamefromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerNamefromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetManagerNamefromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerEmailfromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetManagerEmailfromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerEmailfromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetManagerEmailfromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerIDfromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetManagerIDfromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerIDfromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetManagerIDfromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNofromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPSNofromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNofromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPSNofromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNoFromEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPSNoFromEmail" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNoFromEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPSNoFromEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerNameFromEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetManagerNameFromEmail" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerNameFromEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetManagerNameFromEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFullNameFromEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFullNameFromEmail" />
+  </wsdl:message>
+  <wsdl:message name="GetFullNameFromEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFullNameFromEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNoFromnameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPSNoFromname" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNoFromnameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPSNoFromnameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailFromNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmailFromName" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailFromNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmailFromNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrincipalNameFromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrincipalNameFromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetPrincipalNameFromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrincipalNameFromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDepartmentFromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDepartmentFromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentNameFromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDepartmentNameFromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentNameFromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDepartmentNameFromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDepartmentFromName" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDepartmentFromNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDepartmentFromEmail" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDepartmentFromEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMobileNoFromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMobileNoFromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetMobileNoFromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMobileNoFromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDesignationFromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDesignationFromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetDesignationFromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDesignationFromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordExpiryDateFromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPasswordExpiryDateFromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordExpiryDateFromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPasswordExpiryDateFromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBaanSBUFromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBaanSBUFromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetBaanSBUFromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBaanSBUFromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendExpiryMailFromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:SendExpiryMailFromUserID" />
+  </wsdl:message>
+  <wsdl:message name="SendExpiryMailFromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:SendExpiryMailFromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetExprDaysOfDomainIDFromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetExprDaysOfDomainIDFromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetExprDaysOfDomainIDFromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetExprDaysOfDomainIDFromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendExpiryMailOnAnyDayFromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:SendExpiryMailOnAnyDayFromUserID" />
+  </wsdl:message>
+  <wsdl:message name="SendExpiryMailOnAnyDayFromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:SendExpiryMailOnAnyDayFromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAuthenticationSoapIn">
+    <wsdl:part name="parameters" element="tns:getAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="getAuthenticationSoapOut">
+    <wsdl:part name="parameters" element="tns:getAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAuthenticationAllDomainSoapIn">
+    <wsdl:part name="parameters" element="tns:getAuthenticationAllDomain" />
+  </wsdl:message>
+  <wsdl:message name="getAuthenticationAllDomainSoapOut">
+    <wsdl:part name="parameters" element="tns:getAuthenticationAllDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="changePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:changePassword" />
+  </wsdl:message>
+  <wsdl:message name="changePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:changePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeDataFromUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDataFromUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeDataFromUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDataFromUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsersList" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsersListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncryptSoapIn">
+    <wsdl:part name="parameters" element="tns:Encrypt" />
+  </wsdl:message>
+  <wsdl:message name="EncryptSoapOut">
+    <wsdl:part name="parameters" element="tns:EncryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="DecryptSoapIn">
+    <wsdl:part name="parameters" element="tns:Decrypt" />
+  </wsdl:message>
+  <wsdl:message name="DecryptSoapOut">
+    <wsdl:part name="parameters" element="tns:DecryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddApplicationWiseUserLogSoapIn">
+    <wsdl:part name="parameters" element="tns:AddApplicationWiseUserLog" />
+  </wsdl:message>
+  <wsdl:message name="AddApplicationWiseUserLogSoapOut">
+    <wsdl:part name="parameters" element="tns:AddApplicationWiseUserLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddApplicationErrorLogSoapIn">
+    <wsdl:part name="parameters" element="tns:AddApplicationErrorLog" />
+  </wsdl:message>
+  <wsdl:message name="AddApplicationErrorLogSoapOut">
+    <wsdl:part name="parameters" element="tns:AddApplicationErrorLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoHttpGetIn">
+    <wsdl:part name="inSAM" type="s:string" />
+    <wsdl:part name="inType" type="s:string" />
+    <wsdl:part name="attr" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFullNamefromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFullNamefromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFirstNamefromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFirstNamefromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLastNamefromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLastNamefromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDisplayNamefromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDisplayNamefromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailIDfromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailIDfromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerNamefromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerNamefromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerEmailfromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerEmailfromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerIDfromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerIDfromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNofromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNofromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNoFromEmailHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNoFromEmailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerNameFromEmailHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerNameFromEmailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFullNameFromEmailHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFullNameFromEmailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNoFromnameHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNoFromnameHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailFromNameHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailFromNameHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPrincipalNameFromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPrincipalNameFromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentNameFromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentNameFromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromNameHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromNameHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromEmailHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromEmailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMobileNoFromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMobileNoFromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDesignationFromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDesignationFromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordExpiryDateFromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordExpiryDateFromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:dateTime" />
+  </wsdl:message>
+  <wsdl:message name="GetBaanSBUFromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+    <wsdl:part name="Comp" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBaanSBUFromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendExpiryMailFromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendExpiryMailFromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetExprDaysOfDomainIDFromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetExprDaysOfDomainIDFromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpGetIn">
+    <wsdl:part name="_frm" type="s:string" />
+    <wsdl:part name="_to" type="s:string" />
+    <wsdl:part name="_ccto" type="s:string" />
+    <wsdl:part name="_sub" type="s:string" />
+    <wsdl:part name="_bdy" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendExpiryMailOnAnyDayFromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendExpiryMailOnAnyDayFromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="getAuthenticationHttpGetIn">
+    <wsdl:part name="uid" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAuthenticationHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="getAuthenticationAllDomainHttpGetIn">
+    <wsdl:part name="uid" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="domain" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAuthenticationAllDomainHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="changePasswordHttpGetIn">
+    <wsdl:part name="uid" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="npwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="changePasswordHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeDataFromUserIDHttpGetIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeDataFromUserIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:Person" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersListHttpGetIn">
+    <wsdl:part name="inSAM" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersListHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAnyType" />
+  </wsdl:message>
+  <wsdl:message name="EncryptHttpGetIn">
+    <wsdl:part name="clearText" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EncryptHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DecryptHttpGetIn">
+    <wsdl:part name="cipherText" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DecryptHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddApplicationWiseUserLogHttpGetIn">
+    <wsdl:part name="AppCode" type="s:string" />
+    <wsdl:part name="ActionBy" type="s:string" />
+    <wsdl:part name="Activity" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddApplicationWiseUserLogHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddApplicationErrorLogHttpGetIn">
+    <wsdl:part name="SystemName" type="s:string" />
+    <wsdl:part name="MainExecMsg" type="s:string" />
+    <wsdl:part name="InnerExecMsg" type="s:string" />
+    <wsdl:part name="CurrentUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddApplicationErrorLogHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoHttpPostIn">
+    <wsdl:part name="inSAM" type="s:string" />
+    <wsdl:part name="inType" type="s:string" />
+    <wsdl:part name="attr" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFullNamefromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFullNamefromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFirstNamefromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFirstNamefromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLastNamefromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLastNamefromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDisplayNamefromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDisplayNamefromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailIDfromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailIDfromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerNamefromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerNamefromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerEmailfromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerEmailfromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerIDfromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerIDfromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNofromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNofromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNoFromEmailHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNoFromEmailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerNameFromEmailHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerNameFromEmailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFullNameFromEmailHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFullNameFromEmailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNoFromnameHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPSNoFromnameHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailFromNameHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailFromNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPrincipalNameFromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPrincipalNameFromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentNameFromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentNameFromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromNameHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromEmailHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentFromEmailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMobileNoFromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMobileNoFromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDesignationFromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDesignationFromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordExpiryDateFromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordExpiryDateFromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:dateTime" />
+  </wsdl:message>
+  <wsdl:message name="GetBaanSBUFromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+    <wsdl:part name="Comp" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBaanSBUFromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendExpiryMailFromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendExpiryMailFromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetExprDaysOfDomainIDFromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetExprDaysOfDomainIDFromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpPostIn">
+    <wsdl:part name="_frm" type="s:string" />
+    <wsdl:part name="_to" type="s:string" />
+    <wsdl:part name="_ccto" type="s:string" />
+    <wsdl:part name="_sub" type="s:string" />
+    <wsdl:part name="_bdy" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendExpiryMailOnAnyDayFromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendExpiryMailOnAnyDayFromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="getAuthenticationHttpPostIn">
+    <wsdl:part name="uid" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAuthenticationHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="getAuthenticationAllDomainHttpPostIn">
+    <wsdl:part name="uid" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="domain" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAuthenticationAllDomainHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="changePasswordHttpPostIn">
+    <wsdl:part name="uid" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="npwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="changePasswordHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeDataFromUserIDHttpPostIn">
+    <wsdl:part name="UserAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeDataFromUserIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:Person" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersListHttpPostIn">
+    <wsdl:part name="inSAM" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersListHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAnyType" />
+  </wsdl:message>
+  <wsdl:message name="EncryptHttpPostIn">
+    <wsdl:part name="clearText" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EncryptHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DecryptHttpPostIn">
+    <wsdl:part name="cipherText" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DecryptHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddApplicationWiseUserLogHttpPostIn">
+    <wsdl:part name="AppCode" type="s:string" />
+    <wsdl:part name="ActionBy" type="s:string" />
+    <wsdl:part name="Activity" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddApplicationWiseUserLogHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddApplicationErrorLogHttpPostIn">
+    <wsdl:part name="SystemName" type="s:string" />
+    <wsdl:part name="MainExecMsg" type="s:string" />
+    <wsdl:part name="InnerExecMsg" type="s:string" />
+    <wsdl:part name="CurrentUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddApplicationErrorLogHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="DirectoryServiceSoap">
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:input message="tns:GetUserInfoSoapIn" />
+      <wsdl:output message="tns:GetUserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullNamefromUserID">
+      <wsdl:input message="tns:GetFullNamefromUserIDSoapIn" />
+      <wsdl:output message="tns:GetFullNamefromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstNamefromUserID">
+      <wsdl:input message="tns:GetFirstNamefromUserIDSoapIn" />
+      <wsdl:output message="tns:GetFirstNamefromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastNamefromUserID">
+      <wsdl:input message="tns:GetLastNamefromUserIDSoapIn" />
+      <wsdl:output message="tns:GetLastNamefromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDisplayNamefromUserID">
+      <wsdl:input message="tns:GetDisplayNamefromUserIDSoapIn" />
+      <wsdl:output message="tns:GetDisplayNamefromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailIDfromUserID">
+      <wsdl:input message="tns:GetEmailIDfromUserIDSoapIn" />
+      <wsdl:output message="tns:GetEmailIDfromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerNamefromUserID">
+      <wsdl:input message="tns:GetManagerNamefromUserIDSoapIn" />
+      <wsdl:output message="tns:GetManagerNamefromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerEmailfromUserID">
+      <wsdl:input message="tns:GetManagerEmailfromUserIDSoapIn" />
+      <wsdl:output message="tns:GetManagerEmailfromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerIDfromUserID">
+      <wsdl:input message="tns:GetManagerIDfromUserIDSoapIn" />
+      <wsdl:output message="tns:GetManagerIDfromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNofromUserID">
+      <wsdl:input message="tns:GetPSNofromUserIDSoapIn" />
+      <wsdl:output message="tns:GetPSNofromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNoFromEmail">
+      <wsdl:input message="tns:GetPSNoFromEmailSoapIn" />
+      <wsdl:output message="tns:GetPSNoFromEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerNameFromEmail">
+      <wsdl:input message="tns:GetManagerNameFromEmailSoapIn" />
+      <wsdl:output message="tns:GetManagerNameFromEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullNameFromEmail">
+      <wsdl:input message="tns:GetFullNameFromEmailSoapIn" />
+      <wsdl:output message="tns:GetFullNameFromEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNoFromname">
+      <wsdl:input message="tns:GetPSNoFromnameSoapIn" />
+      <wsdl:output message="tns:GetPSNoFromnameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailFromName">
+      <wsdl:input message="tns:GetEmailFromNameSoapIn" />
+      <wsdl:output message="tns:GetEmailFromNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrincipalNameFromUserID">
+      <wsdl:input message="tns:GetPrincipalNameFromUserIDSoapIn" />
+      <wsdl:output message="tns:GetPrincipalNameFromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromUserID">
+      <wsdl:input message="tns:GetDepartmentFromUserIDSoapIn" />
+      <wsdl:output message="tns:GetDepartmentFromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentNameFromUserID">
+      <wsdl:input message="tns:GetDepartmentNameFromUserIDSoapIn" />
+      <wsdl:output message="tns:GetDepartmentNameFromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromName">
+      <wsdl:input message="tns:GetDepartmentFromNameSoapIn" />
+      <wsdl:output message="tns:GetDepartmentFromNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromEmail">
+      <wsdl:input message="tns:GetDepartmentFromEmailSoapIn" />
+      <wsdl:output message="tns:GetDepartmentFromEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileNoFromUserID">
+      <wsdl:input message="tns:GetMobileNoFromUserIDSoapIn" />
+      <wsdl:output message="tns:GetMobileNoFromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDesignationFromUserID">
+      <wsdl:input message="tns:GetDesignationFromUserIDSoapIn" />
+      <wsdl:output message="tns:GetDesignationFromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPasswordExpiryDateFromUserID">
+      <wsdl:input message="tns:GetPasswordExpiryDateFromUserIDSoapIn" />
+      <wsdl:output message="tns:GetPasswordExpiryDateFromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBaanSBUFromUserID">
+      <wsdl:input message="tns:GetBaanSBUFromUserIDSoapIn" />
+      <wsdl:output message="tns:GetBaanSBUFromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendExpiryMailFromUserID">
+      <wsdl:input message="tns:SendExpiryMailFromUserIDSoapIn" />
+      <wsdl:output message="tns:SendExpiryMailFromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExprDaysOfDomainIDFromUserID">
+      <wsdl:input message="tns:GetExprDaysOfDomainIDFromUserIDSoapIn" />
+      <wsdl:output message="tns:GetExprDaysOfDomainIDFromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailSoapIn" />
+      <wsdl:output message="tns:SendEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendExpiryMailOnAnyDayFromUserID">
+      <wsdl:input message="tns:SendExpiryMailOnAnyDayFromUserIDSoapIn" />
+      <wsdl:output message="tns:SendExpiryMailOnAnyDayFromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAuthentication">
+      <wsdl:input message="tns:getAuthenticationSoapIn" />
+      <wsdl:output message="tns:getAuthenticationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAuthenticationAllDomain">
+      <wsdl:input message="tns:getAuthenticationAllDomainSoapIn" />
+      <wsdl:output message="tns:getAuthenticationAllDomainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <wsdl:input message="tns:changePasswordSoapIn" />
+      <wsdl:output message="tns:changePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDataFromUserID">
+      <wsdl:input message="tns:GetEmployeeDataFromUserIDSoapIn" />
+      <wsdl:output message="tns:GetEmployeeDataFromUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersList">
+      <wsdl:input message="tns:GetUsersListSoapIn" />
+      <wsdl:output message="tns:GetUsersListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <wsdl:input message="tns:EncryptSoapIn" />
+      <wsdl:output message="tns:EncryptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Decrypt">
+      <wsdl:input message="tns:DecryptSoapIn" />
+      <wsdl:output message="tns:DecryptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicationWiseUserLog">
+      <wsdl:input message="tns:AddApplicationWiseUserLogSoapIn" />
+      <wsdl:output message="tns:AddApplicationWiseUserLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicationErrorLog">
+      <wsdl:input message="tns:AddApplicationErrorLogSoapIn" />
+      <wsdl:output message="tns:AddApplicationErrorLogSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="DirectoryServiceHttpGet">
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:input message="tns:GetUserInfoHttpGetIn" />
+      <wsdl:output message="tns:GetUserInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullNamefromUserID">
+      <wsdl:input message="tns:GetFullNamefromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetFullNamefromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstNamefromUserID">
+      <wsdl:input message="tns:GetFirstNamefromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetFirstNamefromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastNamefromUserID">
+      <wsdl:input message="tns:GetLastNamefromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetLastNamefromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDisplayNamefromUserID">
+      <wsdl:input message="tns:GetDisplayNamefromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetDisplayNamefromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailIDfromUserID">
+      <wsdl:input message="tns:GetEmailIDfromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetEmailIDfromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerNamefromUserID">
+      <wsdl:input message="tns:GetManagerNamefromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetManagerNamefromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerEmailfromUserID">
+      <wsdl:input message="tns:GetManagerEmailfromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetManagerEmailfromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerIDfromUserID">
+      <wsdl:input message="tns:GetManagerIDfromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetManagerIDfromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNofromUserID">
+      <wsdl:input message="tns:GetPSNofromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetPSNofromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNoFromEmail">
+      <wsdl:input message="tns:GetPSNoFromEmailHttpGetIn" />
+      <wsdl:output message="tns:GetPSNoFromEmailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerNameFromEmail">
+      <wsdl:input message="tns:GetManagerNameFromEmailHttpGetIn" />
+      <wsdl:output message="tns:GetManagerNameFromEmailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullNameFromEmail">
+      <wsdl:input message="tns:GetFullNameFromEmailHttpGetIn" />
+      <wsdl:output message="tns:GetFullNameFromEmailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNoFromname">
+      <wsdl:input message="tns:GetPSNoFromnameHttpGetIn" />
+      <wsdl:output message="tns:GetPSNoFromnameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailFromName">
+      <wsdl:input message="tns:GetEmailFromNameHttpGetIn" />
+      <wsdl:output message="tns:GetEmailFromNameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrincipalNameFromUserID">
+      <wsdl:input message="tns:GetPrincipalNameFromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetPrincipalNameFromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromUserID">
+      <wsdl:input message="tns:GetDepartmentFromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetDepartmentFromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentNameFromUserID">
+      <wsdl:input message="tns:GetDepartmentNameFromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetDepartmentNameFromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromName">
+      <wsdl:input message="tns:GetDepartmentFromNameHttpGetIn" />
+      <wsdl:output message="tns:GetDepartmentFromNameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromEmail">
+      <wsdl:input message="tns:GetDepartmentFromEmailHttpGetIn" />
+      <wsdl:output message="tns:GetDepartmentFromEmailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileNoFromUserID">
+      <wsdl:input message="tns:GetMobileNoFromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetMobileNoFromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDesignationFromUserID">
+      <wsdl:input message="tns:GetDesignationFromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetDesignationFromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPasswordExpiryDateFromUserID">
+      <wsdl:input message="tns:GetPasswordExpiryDateFromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetPasswordExpiryDateFromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBaanSBUFromUserID">
+      <wsdl:input message="tns:GetBaanSBUFromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetBaanSBUFromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendExpiryMailFromUserID">
+      <wsdl:input message="tns:SendExpiryMailFromUserIDHttpGetIn" />
+      <wsdl:output message="tns:SendExpiryMailFromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExprDaysOfDomainIDFromUserID">
+      <wsdl:input message="tns:GetExprDaysOfDomainIDFromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetExprDaysOfDomainIDFromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailHttpGetIn" />
+      <wsdl:output message="tns:SendEmailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendExpiryMailOnAnyDayFromUserID">
+      <wsdl:input message="tns:SendExpiryMailOnAnyDayFromUserIDHttpGetIn" />
+      <wsdl:output message="tns:SendExpiryMailOnAnyDayFromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAuthentication">
+      <wsdl:input message="tns:getAuthenticationHttpGetIn" />
+      <wsdl:output message="tns:getAuthenticationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAuthenticationAllDomain">
+      <wsdl:input message="tns:getAuthenticationAllDomainHttpGetIn" />
+      <wsdl:output message="tns:getAuthenticationAllDomainHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <wsdl:input message="tns:changePasswordHttpGetIn" />
+      <wsdl:output message="tns:changePasswordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDataFromUserID">
+      <wsdl:input message="tns:GetEmployeeDataFromUserIDHttpGetIn" />
+      <wsdl:output message="tns:GetEmployeeDataFromUserIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersList">
+      <wsdl:input message="tns:GetUsersListHttpGetIn" />
+      <wsdl:output message="tns:GetUsersListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <wsdl:input message="tns:EncryptHttpGetIn" />
+      <wsdl:output message="tns:EncryptHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Decrypt">
+      <wsdl:input message="tns:DecryptHttpGetIn" />
+      <wsdl:output message="tns:DecryptHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicationWiseUserLog">
+      <wsdl:input message="tns:AddApplicationWiseUserLogHttpGetIn" />
+      <wsdl:output message="tns:AddApplicationWiseUserLogHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicationErrorLog">
+      <wsdl:input message="tns:AddApplicationErrorLogHttpGetIn" />
+      <wsdl:output message="tns:AddApplicationErrorLogHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="DirectoryServiceHttpPost">
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:input message="tns:GetUserInfoHttpPostIn" />
+      <wsdl:output message="tns:GetUserInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullNamefromUserID">
+      <wsdl:input message="tns:GetFullNamefromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetFullNamefromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstNamefromUserID">
+      <wsdl:input message="tns:GetFirstNamefromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetFirstNamefromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastNamefromUserID">
+      <wsdl:input message="tns:GetLastNamefromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetLastNamefromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDisplayNamefromUserID">
+      <wsdl:input message="tns:GetDisplayNamefromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetDisplayNamefromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailIDfromUserID">
+      <wsdl:input message="tns:GetEmailIDfromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetEmailIDfromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerNamefromUserID">
+      <wsdl:input message="tns:GetManagerNamefromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetManagerNamefromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerEmailfromUserID">
+      <wsdl:input message="tns:GetManagerEmailfromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetManagerEmailfromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerIDfromUserID">
+      <wsdl:input message="tns:GetManagerIDfromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetManagerIDfromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNofromUserID">
+      <wsdl:input message="tns:GetPSNofromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetPSNofromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNoFromEmail">
+      <wsdl:input message="tns:GetPSNoFromEmailHttpPostIn" />
+      <wsdl:output message="tns:GetPSNoFromEmailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerNameFromEmail">
+      <wsdl:input message="tns:GetManagerNameFromEmailHttpPostIn" />
+      <wsdl:output message="tns:GetManagerNameFromEmailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullNameFromEmail">
+      <wsdl:input message="tns:GetFullNameFromEmailHttpPostIn" />
+      <wsdl:output message="tns:GetFullNameFromEmailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNoFromname">
+      <wsdl:input message="tns:GetPSNoFromnameHttpPostIn" />
+      <wsdl:output message="tns:GetPSNoFromnameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailFromName">
+      <wsdl:input message="tns:GetEmailFromNameHttpPostIn" />
+      <wsdl:output message="tns:GetEmailFromNameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrincipalNameFromUserID">
+      <wsdl:input message="tns:GetPrincipalNameFromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetPrincipalNameFromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromUserID">
+      <wsdl:input message="tns:GetDepartmentFromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetDepartmentFromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentNameFromUserID">
+      <wsdl:input message="tns:GetDepartmentNameFromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetDepartmentNameFromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromName">
+      <wsdl:input message="tns:GetDepartmentFromNameHttpPostIn" />
+      <wsdl:output message="tns:GetDepartmentFromNameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromEmail">
+      <wsdl:input message="tns:GetDepartmentFromEmailHttpPostIn" />
+      <wsdl:output message="tns:GetDepartmentFromEmailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileNoFromUserID">
+      <wsdl:input message="tns:GetMobileNoFromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetMobileNoFromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDesignationFromUserID">
+      <wsdl:input message="tns:GetDesignationFromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetDesignationFromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPasswordExpiryDateFromUserID">
+      <wsdl:input message="tns:GetPasswordExpiryDateFromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetPasswordExpiryDateFromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBaanSBUFromUserID">
+      <wsdl:input message="tns:GetBaanSBUFromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetBaanSBUFromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendExpiryMailFromUserID">
+      <wsdl:input message="tns:SendExpiryMailFromUserIDHttpPostIn" />
+      <wsdl:output message="tns:SendExpiryMailFromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExprDaysOfDomainIDFromUserID">
+      <wsdl:input message="tns:GetExprDaysOfDomainIDFromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetExprDaysOfDomainIDFromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailHttpPostIn" />
+      <wsdl:output message="tns:SendEmailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendExpiryMailOnAnyDayFromUserID">
+      <wsdl:input message="tns:SendExpiryMailOnAnyDayFromUserIDHttpPostIn" />
+      <wsdl:output message="tns:SendExpiryMailOnAnyDayFromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAuthentication">
+      <wsdl:input message="tns:getAuthenticationHttpPostIn" />
+      <wsdl:output message="tns:getAuthenticationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAuthenticationAllDomain">
+      <wsdl:input message="tns:getAuthenticationAllDomainHttpPostIn" />
+      <wsdl:output message="tns:getAuthenticationAllDomainHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <wsdl:input message="tns:changePasswordHttpPostIn" />
+      <wsdl:output message="tns:changePasswordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDataFromUserID">
+      <wsdl:input message="tns:GetEmployeeDataFromUserIDHttpPostIn" />
+      <wsdl:output message="tns:GetEmployeeDataFromUserIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersList">
+      <wsdl:input message="tns:GetUsersListHttpPostIn" />
+      <wsdl:output message="tns:GetUsersListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <wsdl:input message="tns:EncryptHttpPostIn" />
+      <wsdl:output message="tns:EncryptHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Decrypt">
+      <wsdl:input message="tns:DecryptHttpPostIn" />
+      <wsdl:output message="tns:DecryptHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicationWiseUserLog">
+      <wsdl:input message="tns:AddApplicationWiseUserLogHttpPostIn" />
+      <wsdl:output message="tns:AddApplicationWiseUserLogHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicationErrorLog">
+      <wsdl:input message="tns:AddApplicationErrorLogHttpPostIn" />
+      <wsdl:output message="tns:AddApplicationErrorLogHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DirectoryServiceSoap" type="tns:DirectoryServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserInfo">
+      <soap:operation soapAction="http://lthed.com/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullNamefromUserID">
+      <soap:operation soapAction="http://lthed.com/GetFullNamefromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstNamefromUserID">
+      <soap:operation soapAction="http://lthed.com/GetFirstNamefromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastNamefromUserID">
+      <soap:operation soapAction="http://lthed.com/GetLastNamefromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDisplayNamefromUserID">
+      <soap:operation soapAction="http://lthed.com/GetDisplayNamefromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailIDfromUserID">
+      <soap:operation soapAction="http://lthed.com/GetEmailIDfromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerNamefromUserID">
+      <soap:operation soapAction="http://lthed.com/GetManagerNamefromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerEmailfromUserID">
+      <soap:operation soapAction="http://lthed.com/GetManagerEmailfromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerIDfromUserID">
+      <soap:operation soapAction="http://lthed.com/GetManagerIDfromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNofromUserID">
+      <soap:operation soapAction="http://lthed.com/GetPSNofromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNoFromEmail">
+      <soap:operation soapAction="http://lthed.com/GetPSNoFromEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerNameFromEmail">
+      <soap:operation soapAction="http://lthed.com/GetManagerNameFromEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullNameFromEmail">
+      <soap:operation soapAction="http://lthed.com/GetFullNameFromEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNoFromname">
+      <soap:operation soapAction="http://lthed.com/GetPSNoFromname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailFromName">
+      <soap:operation soapAction="http://lthed.com/GetEmailFromName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrincipalNameFromUserID">
+      <soap:operation soapAction="http://lthed.com/GetPrincipalNameFromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromUserID">
+      <soap:operation soapAction="http://lthed.com/GetDepartmentFromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentNameFromUserID">
+      <soap:operation soapAction="http://lthed.com/GetDepartmentNameFromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromName">
+      <soap:operation soapAction="http://lthed.com/GetDepartmentFromName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromEmail">
+      <soap:operation soapAction="http://lthed.com/GetDepartmentFromEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileNoFromUserID">
+      <soap:operation soapAction="http://lthed.com/GetMobileNoFromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDesignationFromUserID">
+      <soap:operation soapAction="http://lthed.com/GetDesignationFromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPasswordExpiryDateFromUserID">
+      <soap:operation soapAction="http://lthed.com/GetPasswordExpiryDateFromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaanSBUFromUserID">
+      <soap:operation soapAction="http://lthed.com/GetBaanSBUFromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendExpiryMailFromUserID">
+      <soap:operation soapAction="http://lthed.com/SendExpiryMailFromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExprDaysOfDomainIDFromUserID">
+      <soap:operation soapAction="http://lthed.com/GetExprDaysOfDomainIDFromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <soap:operation soapAction="http://lthed.com/SendEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendExpiryMailOnAnyDayFromUserID">
+      <soap:operation soapAction="http://lthed.com/SendExpiryMailOnAnyDayFromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthentication">
+      <soap:operation soapAction="http://lthed.com/getAuthentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthenticationAllDomain">
+      <soap:operation soapAction="http://lthed.com/getAuthenticationAllDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <soap:operation soapAction="http://lthed.com/changePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDataFromUserID">
+      <soap:operation soapAction="http://lthed.com/GetEmployeeDataFromUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersList">
+      <soap:operation soapAction="http://lthed.com/GetUsersList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <soap:operation soapAction="http://lthed.com/Encrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decrypt">
+      <soap:operation soapAction="http://lthed.com/Decrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicationWiseUserLog">
+      <soap:operation soapAction="http://lthed.com/AddApplicationWiseUserLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicationErrorLog">
+      <soap:operation soapAction="http://lthed.com/AddApplicationErrorLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DirectoryServiceSoap12" type="tns:DirectoryServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserInfo">
+      <soap12:operation soapAction="http://lthed.com/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullNamefromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetFullNamefromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstNamefromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetFirstNamefromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastNamefromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetLastNamefromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDisplayNamefromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetDisplayNamefromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailIDfromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetEmailIDfromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerNamefromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetManagerNamefromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerEmailfromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetManagerEmailfromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerIDfromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetManagerIDfromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNofromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetPSNofromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNoFromEmail">
+      <soap12:operation soapAction="http://lthed.com/GetPSNoFromEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerNameFromEmail">
+      <soap12:operation soapAction="http://lthed.com/GetManagerNameFromEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullNameFromEmail">
+      <soap12:operation soapAction="http://lthed.com/GetFullNameFromEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNoFromname">
+      <soap12:operation soapAction="http://lthed.com/GetPSNoFromname" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailFromName">
+      <soap12:operation soapAction="http://lthed.com/GetEmailFromName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrincipalNameFromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetPrincipalNameFromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetDepartmentFromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentNameFromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetDepartmentNameFromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromName">
+      <soap12:operation soapAction="http://lthed.com/GetDepartmentFromName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromEmail">
+      <soap12:operation soapAction="http://lthed.com/GetDepartmentFromEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileNoFromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetMobileNoFromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDesignationFromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetDesignationFromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPasswordExpiryDateFromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetPasswordExpiryDateFromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaanSBUFromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetBaanSBUFromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendExpiryMailFromUserID">
+      <soap12:operation soapAction="http://lthed.com/SendExpiryMailFromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExprDaysOfDomainIDFromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetExprDaysOfDomainIDFromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <soap12:operation soapAction="http://lthed.com/SendEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendExpiryMailOnAnyDayFromUserID">
+      <soap12:operation soapAction="http://lthed.com/SendExpiryMailOnAnyDayFromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthentication">
+      <soap12:operation soapAction="http://lthed.com/getAuthentication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthenticationAllDomain">
+      <soap12:operation soapAction="http://lthed.com/getAuthenticationAllDomain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <soap12:operation soapAction="http://lthed.com/changePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDataFromUserID">
+      <soap12:operation soapAction="http://lthed.com/GetEmployeeDataFromUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersList">
+      <soap12:operation soapAction="http://lthed.com/GetUsersList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <soap12:operation soapAction="http://lthed.com/Encrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decrypt">
+      <soap12:operation soapAction="http://lthed.com/Decrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicationWiseUserLog">
+      <soap12:operation soapAction="http://lthed.com/AddApplicationWiseUserLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicationErrorLog">
+      <soap12:operation soapAction="http://lthed.com/AddApplicationErrorLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DirectoryServiceHttpGet" type="tns:DirectoryServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetUserInfo">
+      <http:operation location="/GetUserInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullNamefromUserID">
+      <http:operation location="/GetFullNamefromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstNamefromUserID">
+      <http:operation location="/GetFirstNamefromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastNamefromUserID">
+      <http:operation location="/GetLastNamefromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDisplayNamefromUserID">
+      <http:operation location="/GetDisplayNamefromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailIDfromUserID">
+      <http:operation location="/GetEmailIDfromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerNamefromUserID">
+      <http:operation location="/GetManagerNamefromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerEmailfromUserID">
+      <http:operation location="/GetManagerEmailfromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerIDfromUserID">
+      <http:operation location="/GetManagerIDfromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNofromUserID">
+      <http:operation location="/GetPSNofromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNoFromEmail">
+      <http:operation location="/GetPSNoFromEmail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerNameFromEmail">
+      <http:operation location="/GetManagerNameFromEmail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullNameFromEmail">
+      <http:operation location="/GetFullNameFromEmail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNoFromname">
+      <http:operation location="/GetPSNoFromname" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailFromName">
+      <http:operation location="/GetEmailFromName" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrincipalNameFromUserID">
+      <http:operation location="/GetPrincipalNameFromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromUserID">
+      <http:operation location="/GetDepartmentFromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentNameFromUserID">
+      <http:operation location="/GetDepartmentNameFromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromName">
+      <http:operation location="/GetDepartmentFromName" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromEmail">
+      <http:operation location="/GetDepartmentFromEmail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileNoFromUserID">
+      <http:operation location="/GetMobileNoFromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDesignationFromUserID">
+      <http:operation location="/GetDesignationFromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPasswordExpiryDateFromUserID">
+      <http:operation location="/GetPasswordExpiryDateFromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaanSBUFromUserID">
+      <http:operation location="/GetBaanSBUFromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendExpiryMailFromUserID">
+      <http:operation location="/SendExpiryMailFromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExprDaysOfDomainIDFromUserID">
+      <http:operation location="/GetExprDaysOfDomainIDFromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <http:operation location="/SendEmail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendExpiryMailOnAnyDayFromUserID">
+      <http:operation location="/SendExpiryMailOnAnyDayFromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthentication">
+      <http:operation location="/getAuthentication" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthenticationAllDomain">
+      <http:operation location="/getAuthenticationAllDomain" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <http:operation location="/changePassword" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDataFromUserID">
+      <http:operation location="/GetEmployeeDataFromUserID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersList">
+      <http:operation location="/GetUsersList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <http:operation location="/Encrypt" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decrypt">
+      <http:operation location="/Decrypt" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicationWiseUserLog">
+      <http:operation location="/AddApplicationWiseUserLog" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicationErrorLog">
+      <http:operation location="/AddApplicationErrorLog" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DirectoryServiceHttpPost" type="tns:DirectoryServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetUserInfo">
+      <http:operation location="/GetUserInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullNamefromUserID">
+      <http:operation location="/GetFullNamefromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstNamefromUserID">
+      <http:operation location="/GetFirstNamefromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastNamefromUserID">
+      <http:operation location="/GetLastNamefromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDisplayNamefromUserID">
+      <http:operation location="/GetDisplayNamefromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailIDfromUserID">
+      <http:operation location="/GetEmailIDfromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerNamefromUserID">
+      <http:operation location="/GetManagerNamefromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerEmailfromUserID">
+      <http:operation location="/GetManagerEmailfromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerIDfromUserID">
+      <http:operation location="/GetManagerIDfromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNofromUserID">
+      <http:operation location="/GetPSNofromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNoFromEmail">
+      <http:operation location="/GetPSNoFromEmail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerNameFromEmail">
+      <http:operation location="/GetManagerNameFromEmail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullNameFromEmail">
+      <http:operation location="/GetFullNameFromEmail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPSNoFromname">
+      <http:operation location="/GetPSNoFromname" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailFromName">
+      <http:operation location="/GetEmailFromName" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrincipalNameFromUserID">
+      <http:operation location="/GetPrincipalNameFromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromUserID">
+      <http:operation location="/GetDepartmentFromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentNameFromUserID">
+      <http:operation location="/GetDepartmentNameFromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromName">
+      <http:operation location="/GetDepartmentFromName" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentFromEmail">
+      <http:operation location="/GetDepartmentFromEmail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileNoFromUserID">
+      <http:operation location="/GetMobileNoFromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDesignationFromUserID">
+      <http:operation location="/GetDesignationFromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPasswordExpiryDateFromUserID">
+      <http:operation location="/GetPasswordExpiryDateFromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaanSBUFromUserID">
+      <http:operation location="/GetBaanSBUFromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendExpiryMailFromUserID">
+      <http:operation location="/SendExpiryMailFromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExprDaysOfDomainIDFromUserID">
+      <http:operation location="/GetExprDaysOfDomainIDFromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <http:operation location="/SendEmail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendExpiryMailOnAnyDayFromUserID">
+      <http:operation location="/SendExpiryMailOnAnyDayFromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthentication">
+      <http:operation location="/getAuthentication" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthenticationAllDomain">
+      <http:operation location="/getAuthenticationAllDomain" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <http:operation location="/changePassword" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDataFromUserID">
+      <http:operation location="/GetEmployeeDataFromUserID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersList">
+      <http:operation location="/GetUsersList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <http:operation location="/Encrypt" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decrypt">
+      <http:operation location="/Decrypt" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicationWiseUserLog">
+      <http:operation location="/AddApplicationWiseUserLog" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicationErrorLog">
+      <http:operation location="/AddApplicationErrorLog" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DirectoryService">
+    <wsdl:port name="DirectoryServiceSoap" binding="tns:DirectoryServiceSoap">
+      <soap:address location="https://ecom.lthed.com/portal/adserv/DirectoryService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DirectoryServiceSoap12" binding="tns:DirectoryServiceSoap12">
+      <soap12:address location="https://ecom.lthed.com/portal/adserv/DirectoryService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DirectoryServiceHttpGet" binding="tns:DirectoryServiceHttpGet">
+      <http:address location="https://ecom.lthed.com/portal/adserv/DirectoryService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DirectoryServiceHttpPost" binding="tns:DirectoryServiceHttpPost">
+      <http:address location="https://ecom.lthed.com/portal/adserv/DirectoryService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
